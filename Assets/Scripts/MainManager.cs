@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainManager : MonoBehaviour
 {
     public static MainManager mainManager; // create static instance of this class
+    public Color teamColor; //pass the color that the user selects to the units
 
     private void Awake()
     {
