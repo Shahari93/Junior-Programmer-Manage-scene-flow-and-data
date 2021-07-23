@@ -28,7 +28,7 @@ public abstract class Unit : MonoBehaviour,
     {
         if(MainManager.mainManager !=null)
         {
-            SetColor(MainManager.mainManager.teamColor);
+            SetColor(MainManager.mainManager.teamColor); // Sets the selected color to the cars
         }
     }
 

@@ -24,6 +24,9 @@ public class MenuUIHandler : MonoBehaviour
         ColorPicker.Init();
         //this will call the NewColorSelected function when the color picker have a color button clicked.
         ColorPicker.onColorChanged += NewColorSelected;
+
+        // will pre-select the saved color in the MainManager
+        ColorPicker.SelectColor(MainManager.mainManager.teamColor);
     }
 
     //SceneManager is the class that handles everything related to loading and unloading scenes
@@ -34,6 +37,9 @@ public class MenuUIHandler : MonoBehaviour
 
     public void Exit()
     {
+        // Saves the color when the user quits the game
+        MainManager.mainManager.SaveColor();
+
         // Checking if we are playing the game in a build or the editor
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
@@ -41,7 +47,19 @@ public class MenuUIHandler : MonoBehaviour
         // only works in the built application, not when you’re testing in the Editor
         Application.Quit();
 #endif
+    }
 
 
+
+    // Testing with buttons
+    public void SavePickedColor()
+    {
+        MainManager.mainManager.SaveColor();
+    }
+
+    public void LoadPickedColor()
+    {
+        MainManager.mainManager.LoadColor();
+        ColorPicker.SelectColor(MainManager.mainManager.teamColor);
     }
 }
