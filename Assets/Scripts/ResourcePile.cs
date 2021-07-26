@@ -35,6 +35,4 @@ public class ResourcePile : Building
         return $"Producing at the speed of {ProductionSpeed}/s";
         
     }
-    
-    
 }
