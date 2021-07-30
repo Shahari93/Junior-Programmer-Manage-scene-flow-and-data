@@ -12,7 +12,6 @@ public abstract class Unit : MonoBehaviour,
     UIMainScene.IUIInfoContent
 {
     public float Speed = 3;
-
     protected NavMeshAgent m_Agent;
     protected Building m_Target;
 

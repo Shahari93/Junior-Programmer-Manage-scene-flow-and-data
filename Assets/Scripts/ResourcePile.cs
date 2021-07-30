@@ -9,7 +9,6 @@ using UnityEngine;
 public class ResourcePile : Building
 {
     public ResourceItem Item;
-
     private float m_productionSpeed = 0.5f;
     public float ProductionSpeed
     {
