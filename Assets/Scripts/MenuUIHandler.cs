@@ -27,6 +27,8 @@ public class MenuUIHandler : MonoBehaviour
 
         // will pre-select the saved color in the MainManager
         ColorPicker.SelectColor(MainManager.mainManager.teamColor);
+
+        // MainManager.mainManager = null; // we are getting an error because this feild is read only
     }
 
     //SceneManager is the class that handles everything related to loading and unloading scenes

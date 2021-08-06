@@ -6,7 +6,8 @@ using System.IO; // for input and output
 
 public class MainManager : MonoBehaviour
 {
-    public static MainManager mainManager; // create static instance of this class
+    // With this code, you can now set the property’s value from within the class, but only get it from outside the class
+    public static MainManager mainManager { get; private set; } // create static instance of this class
     public Color teamColor; //pass the color that the user selects to the units
 
     private void Awake()
